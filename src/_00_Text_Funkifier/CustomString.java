@@ -15,13 +15,13 @@ public class CustomString extends SpecialString{
 		String converted="";
 		Character saved;
 		ArrayList<Character> chars=new ArrayList<Character>();
-		for(int i=0; i<s.length()-1; i++) {
+		for(int i=0; i<s.length(); i++) {
 			if(s.charAt(i)!=32) {
 			chars.add(s.charAt(i));
 			}
 		}
-		for(int j=1; j<chars.size(); j++) {
-			for(int k=chars.size(); k>0; k--) {	
+		for(int k=chars.size(); k>=0; k--) {
+			for(int j=1; j<chars.size(); j++) {
 				if(chars.get(j-1).compareTo(chars.get(j))>0) {
 					saved=chars.get(j-1);
 					chars.set(j-1, chars.get(j));
